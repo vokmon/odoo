@@ -1,0 +1,9 @@
+# PostgreSQL settings
+POSTGRES_USER=odoo
+POSTGRES_PASSWORD=myodoo
+POSTGRES_DB=postgres
+POSTGRES_PORT=5434
+POSTGRES_HOST=postgres
+
+# Odoo settings
+ODOO_PORT=8069
