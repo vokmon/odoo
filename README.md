@@ -89,4 +89,6 @@ Database name: odoo
 Email: vokmon@gmail.com
 Password: password
 
-
+## Fix report issue style
+Go to Configurations/Technical/System parameters and add a new parameter :
+Key : report.url , Value : http://0.0.0.0:8069

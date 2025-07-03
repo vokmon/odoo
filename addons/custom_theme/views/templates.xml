@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_theme_assets" inherit_id="web.layout">
+        <xpath expr="//head" position="inside">
+            <style>
+                /* Custom Theme CSS - Using CSS Variables */
+                :root {
+                    --navbar-color: #d62429;
+                    --accent-color: #ffdb45;
+                    --accent-hover: #e6c53e;
+                    --text-dark: #333;
+                }
+                
+                /* Main navigation bar - Red */
+                .o_main_navbar,
+                .o_main_navbar .o_menu_brand,
+                .o_main_navbar .o_menu_sections,
+                .o_main_navbar .o_menu_systray {
+                    background-color: var(--navbar-color) !important;
+                    border-color: var(--navbar-color) !important;
+                }
+                
+                /* Selected menu items - Yellow */
+                .o_main_navbar .dropdown-menu .dropdown-item.active,
+                .o_main_navbar .dropdown-menu .dropdown-item:active,
+                .o_main_navbar .o_menu_sections .o_nav_entry.active,
+                .o_main_navbar .o_menu_sections .o_nav_entry:active {
+                    background-color: var(--accent-color) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                /* Hover state for menu items */
+                .o_main_navbar .dropdown-menu .dropdown-item:hover,
+                .o_main_navbar .o_menu_sections .o_nav_entry:hover {
+                    background-color: var(--accent-color) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                /* Menu sections only */
+                .o_main_navbar .o_menu_sections .o_nav_entry {
+                    background-color: var(--accent-color) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                .o_main_navbar .o_menu_sections .o_nav_entry:hover {
+                    background-color: var(--accent-hover) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                /* Hover effect for all elements in menu sections */
+                .o_main_navbar .o_menu_sections *:hover {
+                    filter: brightness(0.8) !important;
+                }
+                
+                /* Dropdown toggle buttons under menu sections */
+                .o_main_navbar .o_menu_sections .o-dropdown .dropdown-toggle {
+                    background-color: var(--accent-color) !important;
+                    border-color: var(--accent-color) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                .o_main_navbar .o_menu_sections .o-dropdown .dropdown-toggle:hover {
+                    background-color: var(--accent-hover) !important;
+                    border-color: var(--accent-hover) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                /* Specific dropdown toggle button class - ONLY within menu sections */
+                .o_main_navbar .o_menu_sections .o-dropdown.dropdown-toggle.dropdown {
+                    background-color: var(--navbar-color) !important;
+                    color: white !important;
+                }
+                
+                /* Dropdown items with specific classes - ONLY within menu sections */
+                .o_main_navbar .o_menu_sections .o-dropdown-item.dropdown-item.o-navigable.o_nav_entry {
+                    background-color: var(--navbar-color) !important;
+                    color: white !important;
+                }
+                
+                /* Violet buttons to Yellow */
+                .btn-primary,
+                .o_form_view .o_form_button_create,
+                .o_form_view .o_form_button_save,
+                .o_list_view .o_list_button_add,
+                .o_kanban_view .o_kanban_record_add,
+                .o_control_panel .o_cp_top .o_cp_top_left .o_cp_buttons .btn-primary {
+                    background-color: var(--accent-color) !important;
+                    border-color: var(--accent-color) !important;
+                    color: var(--text-dark) !important;
+                }
+                
+                .btn-primary:hover,
+                .o_form_view .o_form_button_create:hover,
+                .o_form_view .o_form_button_save:hover,
+                .o_list_view .o_list_button_add:hover,
+                .o_kanban_view .o_kanban_record_add:hover,
+                .o_control_panel .o_cp_top .o_cp_top_left .o_cp_buttons .btn-primary:hover {
+                    background-color: var(--accent-hover) !important;
+                    border-color: var(--accent-hover) !important;
+                    color: var(--text-dark) !important;
+                }
+            </style>
+        </xpath>
+    </template>
+</odoo> 

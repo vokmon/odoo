@@ -12,7 +12,9 @@ services:
       - odoo_postgres_data:/var/lib/postgresql/data
 
   odoo:
-    image: odoo:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: odoo_container
     depends_on:
       - postgres
