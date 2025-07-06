@@ -92,3 +92,20 @@ Password: password
 ## Fix report issue style
 Go to Configurations/Technical/System parameters and add a new parameter :
 Key : report.url , Value : http://0.0.0.0:8069
+
+
+## Useful apps
+
+- Backup
+  - https://apps.odoo.com/apps/modules/18.0/auto_database_backup
+- Accounting
+  - https://apps.odoo.com/apps/modules/18.0/om_account_accountant
+- Quality
+  - https://apps.odoo.com/apps/modules/18.0/mgmtsystem_quality
+  - https://github.com/OCA/management-system
+- Report for Sale + invoice
+  - https://apps.odoo.com/apps/modules/18.0/customized_invoice
+  - https://www.optima.co.ke/shop/professional-invoice-sales-order-templates-9?attrib=2-5#attr=61
+- All reports
+  - https://apps.odoo.com/apps/modules/18.0/professional_templates
+  - https://www.optima.co.ke/shop/professional-report-templates-2?attrib=2-5#attr=1
