@@ -9,7 +9,7 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"
     volumes:
-      - odoo_postgres_data:/var/lib/postgresql/data
+      - ./odoo_postgres_data:/var/lib/postgresql/data
 
   odoo:
     build:
@@ -25,10 +25,10 @@ services:
       USER: ${POSTGRES_USER}
       PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - odoo_data:/var/lib/odoo
+      - ./odoo_data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
+      - ./backup:/backup
 
 volumes:
   odoo_postgres_data:
   odoo_data:
-
