@@ -84,7 +84,7 @@ MIT (or your preferred license)
 - For production deployments, consider using Docker volumes and setting secure passwords
 
 ## Odoo
-Master Password: 7mbb-c5a4-8ngg
+Master Password: pkk2-i8wg-b5z3
 Database name: odoo
 Email: vokmon@gmail.com
 Password: password
@@ -93,6 +93,11 @@ Password: password
 Go to Configurations/Technical/System parameters and add a new parameter :
 Key : report.url , Value : http://0.0.0.0:8069
 
+## Accounting set to Paid
+Setting the Bank/Cash Journal's Main Account as the Outstanding Account:
+* Go to Accounting > Configuration > Journals.
+* Select the journal you are using for customer payments (e.g., your Bank or Cash journal).
+* Under the "Incoming Payments" tab (and "Outgoing Payments" for vendor bills), set the Outstanding Receipts Account (or Outstanding Payments Account) to be the same account as your Bank Account (or Cash Account) for that journal.
 
 ## Useful apps
 

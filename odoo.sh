@@ -43,6 +43,8 @@ case "$1" in
     if [[ "$2" == "-v" ]]; then
       echo "🧹 Stopping and removing containers and volumes in $WORKDIR ..."
       docker compose -f "$COMPOSE_FILE" down -v
+      rm -rf odoo_data
+      rm -rf odoo_postgres_data
     else
       echo "🛑 Stopping and removing containers in $WORKDIR ..."
       docker compose -f "$COMPOSE_FILE" down
